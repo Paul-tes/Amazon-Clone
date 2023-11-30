@@ -1,12 +1,16 @@
-import './App.css'
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
 
 function App() {
 
   return (
-    <>
-     <h1 className='font-bold'>Amazone Clone</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<HomePage />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;
